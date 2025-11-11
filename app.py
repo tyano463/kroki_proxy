@@ -4,7 +4,7 @@ import urllib.parse
 
 app = Flask(__name__)
 
-@app.route("/graphviz")
+@app.route("/graphviz/svg")
 def proxy():
     source = request.args.get("source", "")
     dot_code = urllib.parse.unquote(source)
